@@ -1,0 +1,27 @@
+﻿@model IEnumerable<DefCan.Models.Item>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<table cellpadding="2" cellspacing="2" border="1">
+    <tr>
+        <th> Name </th>
+        <th> Cost </th>
+        <th> Category </th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.Name </td>
+            <td> @item.Cost </td>
+            <td> @item.Category </td>
+            <td align="center">@Html.ActionLink("Order","Order",  new { id = item.ItemID}, null) </td>
+        </tr>
+    }
+</table>
