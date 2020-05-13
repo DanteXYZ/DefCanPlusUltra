@@ -1,0 +1,1 @@
+Additional functionality to the Item component of project
